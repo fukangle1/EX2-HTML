@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shinchan - Homepage</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', 'Poppins', Arial, Helvetica, sans-serif;
+            background-color: #e6f0ff;
+            color: #1a2a4f;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #f0f4ff;
+        }
+
+        .banner-row {
+            text-align: center;
+            font-size: 0;
+        }
+        .banner-img {
+            width: 60%;
+            display: inline-block;
+            vertical-align: top;
+            height: 250px;
+        }
+        .banner-img:last-child {
+            width: 40%;
+        }
+        .banner-img img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .nav {
+            text-align: center;
+            margin: 20px 0;
+            padding: 12px 0;
+            background-color: #b8deff;
+            border-bottom: 2px solid #7fb4ff;
+            border-top: 2px solid #7fb4ff;           
+        }
+        .nav a {
+            color: #003380;
+            font-weight: bold;
+            text-decoration: none;       
+            font-size: 18px;
+            margin: 0 15px;
+            font-family: 'Segoe UI', 'Poppins', Arial, Helvetica, sans-serif;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+            background-color: #ccdcff6b;
+            padding: 5px;
+        }
+
+        h1 {
+            color: #1e3a8a;
+            text-align: center; 
+            margin-top: 30px;
+            font-size: 32px;
+            font-family: 'Segoe UI', 'Poppins', Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+        h2 {
+            color: #1e3a8a;
+            text-align: center;
+            font-size: 28px;
+            background-color: #b8deff;
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-family: 'Segoe UI', 'Poppins', Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+        h3 {
+            color: #0e54e9;
+            text-align: center;
+            font-size: 24px;
+            font-family: 'Segoe UI', 'Poppins', Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+        small {
+            font-size: 14px;
+            color: #688fc7;
+            font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+        }
+
+        .video-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        video {
+            max-width: 90%;
+            width: 600px;
+            height: auto;
+            border: 4px solid #7fb4ff;
+            border-radius: 16px;
+        }
+
+        .characters-table {
+            margin: 20px 0;
+            width: 100%;    
+        }
+        .characters-table td {
+            width: 33%;
+            padding: 15px;
+            vertical-align: top;
+            text-align: center;
+            background-color: #e6f0ff;
+            border: 1px solid #b8d4ff;
+            font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+        }
+        .characters-table img {
+            width: 120px;
+            height: auto;
+            border-radius: 45%;
+            border: 3px solid #73a4e7;
+        }
+        .char-name {
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            margin: 10px 0 5px;
+            color: #1f42a4;
+            font-family: 'Segoe UI', 'Poppins', Arial, Helvetica, sans-serif;
+        }
+
+        .poster-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .poster-img {
+            max-width: 90%;
+            width: 400px;
+            border-radius: 20px;
+            border: 3px solid #7fb4ff;
+        }
+
+        .form-section {
+            background-color: #cbd1d7;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 20px;
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            width: 85%;
+            max-width: 500px;
+            font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+        }
+        input, textarea, select {
+            margin: 8px 0;
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #78aefa;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+            background-color: rgb(255, 255, 255);
+        }
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        input[type="submit"] {
+            background-color: #3079ef;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            cursor: pointer;
+            width: auto;
+            padding: 10px 20px;
+            border: none;
+            font-family: 'Segoe UI', 'Poppins', Arial, Helvetica, sans-serif;
+        }
+        input[type="submit"]:hover {
+            background-color: #2563eb;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #b8d9ff;
+            padding: 20px;
+            margin-top: 30px;
+            color: #1e3a8a;
+            font-size: 14px;
+            font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+        }
+
+        .fixed-shinchan {
+            position: fixed;
+            z-index: 999;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+        }
+        .fixed-shinchan img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="banner-row">
+        <div class="banner-img">
+            <img src="assets/shin-chan-banner.jpg" alt="Shinchan Banner">
+        </div>
+        <div class="banner-img">
+            <img src="assets/naughtiest-son.jpg" alt="Naughtiest Son">
+        </div>
+    </div>
+
+    <div class="nav">
+        <a href="#">Shinchan: Shiro and the Coal Town Game</a>
+        <a href="#characters">Characters</a>
+        <a href="#favorite">Who's your favorite?</a>
+    </div>
+
+    <h1>Shinchan: Shiro and the Coal Town</h1>
+    <p style="text-align: center;"><small>(Available on: maybe both Nintendo Switch and Windows PC)</small></p>
+
+    <div class="video-section">
+        <video controls>
+            <source src="assets/shinchan-and-the-coal-town.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>0:00 / 1:38</p>
+    </div>
+
+    <div class="poster-section">
+        <img src="assets/shinchan-coal-town-poster.jpg" alt="Coal Town Poster" class="poster-img">
+        <p><em>Let us explore the Coal Town~</em></p>
+    </div>
+
+    <div style="text-align: center;">
+        <h2 id="characters">The Characters</h2>
+    </div>
+
+    <table class="characters-table" border="0" cellpadding="10">
+        <tr align="center">
+            <td>
+                <img src="assets/character-shinchan.png" alt="Shinchan"><br>
+                <span class="char-name">Shinnosuke Nohara (Shinchan)</span>
+                The mischievous 5-year-old protagonist known for his hilarious antics and love of choco chips.
+            </td>
+            <td>
+                <img src="assets/character-misae.webp" alt="Misae"><br>
+                <span class="char-name">Misae Nohara (Mom)</span>
+                Shinchan's short-tempered but loving mother, always trying to keep him in line.
+            </td>
+            <td>
+                <img src="assets/character-hiroshi.webp" alt="Hiroshi"><br>
+                <span class="char-name">Hiroshi Nohara (Dad)</span>
+                The laid-back father who works at a company and enjoys his evening beer.
+            </td>
+        </tr>
+        <tr align="center">
+            <td>
+                <img src="assets/character-himawari.png" alt="Himawari"><br>
+                <span class="char-name">Himawari (Sister)</span>
+                The youngest of the Noharas. Loves shiny objects and brandname goods. Smiles sideways, like Shinchan.
+            </td>
+            <td>
+                <img src="assets/character-shiro.png" alt="Shiro"><br>
+                <span class="char-name">Yukino Nohara (Shiro)</span>
+                The family dog - small, fluffy, and sometimes the most sensible member of the household.
+            </td>
+            <td>
+                <img src="assets/character-toru-kazama.webp" alt="Toru Kazama"><br>
+                <span class="char-name">Toru Kazama</span>
+                The smart and responsible friend of Shinchan, often the voice of reason in the group.
+            </td>
+         </tr>
+    </table>
+
+    <h3 id="favorite">Who's your favorite character?</h3>
+
+    <div class="form-section">
+        <form>
+
+            <p><strong>Who's your favorite character?</strong></p>
+            <label><input type="radio" name="favorite" value="shinchan" checked> Shinchan</label><br>
+            <label><input type="radio" name="favorite" value="misae"> Misae</label><br>
+            <label><input type="radio" name="favorite" value="hiroshi"> Hiroshi</label><br>
+            <label><input type="radio" name="favorite" value="himawari"> Himawari</label><br>
+            <label><input type="radio" name="favorite" value="shiro"> Shiro</label><br>
+            <label><input type="radio" name="favorite" value="kazama"> Kazama</label><br>
+
+            <p><strong>You don't like aforementioned character? Character not in the list? Write their name below:</strong></p>
+            <label>Your other favourite character:</label>
+            <input type="text" name="other_character" placeholder="Enter character name">
+
+            <br><br>
+
+            <label><strong>Why do you like this character?</strong></label><br>
+            <textarea name="reason" rows="4" cols="50" placeholder="State your reasons in a couple of lines..."></textarea>
+
+            <br><br>
+
+            <h3>Tell us a bit more about yourself</h3>
+
+            <label>Your Name:</label>
+            <input type="text" name="name" placeholder="Enter your name" required>
+
+            <br><br>
+
+            <label>Your Gender:</label>
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+
+            <br><br>
+
+            <label>Your Date of Birth:</label>
+            <input type="text" name="dob" placeholder="dd.mm.yyyy" pattern="\d{2}\.\d{2}\.\d{4}" title="Please enter date in dd.mm.yyyy format">
+
+            <br><br>
+
+            <label>Your Email:</label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+
+    <footer>
+        <p>© 2026 Programming4</p>
+        <p>Get in touch with us: shinchan-lovers@justlearninghtml.com</p>
+    </footer>
+
+</div>
+
+<div class="fixed-shinchan">
+    <img src="assets/shinchan.gif" alt="Dancing Shinchan">
+</div>
+
+</body>
+</html>
