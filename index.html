@@ -18,6 +18,7 @@
             width: 100%;
             margin: 0 auto;
             background-color: #f0f4ff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
         .banner-row {
@@ -55,11 +56,15 @@
             font-size: 18px;
             margin: 0 15px;
             font-family: 'Segoe UI', 'Poppins', Arial, Helvetica, sans-serif;
+            padding: 8px 12px;
+            display: inline-block;
+            border-radius: 20px;
         }
         .nav a:hover {
             text-decoration: underline;
-            background-color: #ccdcff6b;
-            padding: 5px;
+            background-color: #7fb4ff;
+            padding: 8px 12px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
         }
 
         h1 {
@@ -80,6 +85,7 @@
             border-radius: 30px;
             font-family: 'Segoe UI', 'Poppins', Arial, Helvetica, sans-serif;
             font-weight: 600;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
         }
         h3 {
             color: #0e54e9;
@@ -104,6 +110,7 @@
             height: auto;
             border: 4px solid #7fb4ff;
             border-radius: 16px;
+            box-shadow: 8px 8px 16px rgba(0,0,0,0.2);
         }
 
         .characters-table {
@@ -118,12 +125,18 @@
             background-color: #e6f0ff;
             border: 1px solid #b8d4ff;
             font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+            border-radius: 20px;
+        }
+        .characters-table td:hover {
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+            background-color: #d6e8ff;
         }
         .characters-table img {
             width: 120px;
             height: auto;
-            border-radius: 45%;
+            border-radius: 50%;
             border: 3px solid #73a4e7;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.15);
         }
         .char-name {
             font-weight: bold;
@@ -132,17 +145,6 @@
             margin: 10px 0 5px;
             color: #1f42a4;
             font-family: 'Segoe UI', 'Poppins', Arial, Helvetica, sans-serif;
-        }
-
-        .poster-section {
-            text-align: center;
-            margin: 30px 0;
-        }
-        .poster-img {
-            max-width: 90%;
-            width: 400px;
-            border-radius: 20px;
-            border: 3px solid #7fb4ff;
         }
 
         .form-section {
@@ -181,9 +183,12 @@
             padding: 10px 20px;
             border: none;
             font-family: 'Segoe UI', 'Poppins', Arial, Helvetica, sans-serif;
+            border-radius: 30px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
         }
         input[type="submit"]:hover {
             background-color: #2563eb;
+            box-shadow: 3px 3px 12px rgba(0,0,0,0.3);
         }
 
         footer {
@@ -202,6 +207,9 @@
             bottom: 20px;
             right: 20px;
             width: 100px;
+        }
+        .fixed-shinchan:hover {
+            width: 110px;
         }
         .fixed-shinchan img {
             width: 100%;
@@ -232,16 +240,11 @@
     <p style="text-align: center;"><small>(Available on: maybe both Nintendo Switch and Windows PC)</small></p>
 
     <div class="video-section">
-        <video controls>
+        <video controls poster="assets/shinchan-coal-town-poster.jpg">
             <source src="assets/shinchan-and-the-coal-town.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <p>0:00 / 1:38</p>
-    </div>
-
-    <div class="poster-section">
-        <img src="assets/shinchan-coal-town-poster.jpg" alt="Coal Town Poster" class="poster-img">
-        <p><em>Let us explore the Coal Town~</em></p>
     </div>
 
     <div style="text-align: center;">
